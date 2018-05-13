@@ -1,0 +1,86 @@
+<footer id="footer">
+	<nav id="nav-bottom" class="content-block">
+		<p class="copyright">Copyright © 2014 - All Rights Reserved</p>
+
+		<ul class="page-list">
+			<li class="page"><a href="#home">Home</a></li>
+			<li class="page active"><a href="#about_us">About us</a></li>
+			<li class="page"><a href="#news">News</a></li>
+			<li class="page"><a href="#careers">Careers</a></li>
+			<li class="page"><a href="#faq">FAQ</a></li>
+			<li class="page"><a href="#contact_us">Contact us</a></li>
+		</ul>
+
+		<button id="move-to-top" class="btn"></button>
+	</nav>
+
+	<div id="informaton-block" class="content-block">
+		<div class="content">
+			<div class="company col-4">
+				<a class="logo" href="/" title="Go to home page">
+					<img class="pic" src="img/logo.png" alt="logotype"><span class="name">FREXY</span>
+				</a>
+
+				<p class="text">Mauris rhoncus pretium porttitor. Cras scelerisque commodo odio.</p>
+
+				<div class="social">
+					<a href="#" class="link twiter"></a>
+					<a href="#" class="link facebook"></a>
+					<a href="#" class="link dribbble"></a>
+					<a href="#" class="link beahance"></a>
+				</div>
+			</div>
+
+			<div class="blog-postes col-4">
+				<h3 class="title">Latest blog postes</h3>
+				<ul class="list">
+					{{#for 3}}
+					<li class="item">
+						<a href="#" title="Amazing post with all the goodies">
+							<p class="text">Amazing post with all the goodies</p>
+							<time class="time">March 23, 2013</time>
+						</a>
+					</li>
+					{{/for}}
+				</ul>
+			</div>
+
+			<div class="contact-info col-4">
+				<h3 class="title">Contact info</h3>
+				<ul class="list">
+					<li class="location item">
+						<a href="//www.google.com/maps" title="Go to our location">
+							<p class="text">FrexyStudio</p>
+							<p class="text">2046 Blue Spruce Lane Laurel 20707</p>
+							<p class="text">Canada.</p>
+						</a>
+					</li>
+
+					<li class="phone item">
+						<a href="tel:123-456-7890" title="Click to call as">
+							<p class="text">Phone : (123) 456 7890</p>
+							<p class="text">Fax : (123) 456 7890</p>
+						</a>
+					</li>
+
+					<li class="mail item">
+						<a href="mailto:frexyStudio@gmail.com" title="Write to us">
+							<p class="text">FrexyStudio@gmail.com</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="photo-stream col-4">
+				<h3 class="title">Photo stream</h3>
+				<ul class="list">
+					{{#for 12}}
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(../img/photo_stream.jpg)"></a>
+					</li>
+					{{/for}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>

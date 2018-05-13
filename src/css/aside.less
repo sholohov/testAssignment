@@ -1,0 +1,147 @@
+// out: null
+
+@import 'prop';
+
+#content {
+	.column.left {
+		margin: 0 1rem 0 0;
+		width: 26rem;
+		
+		.block {
+			padding: 0.5rem 0;
+			
+			&:first-of-type {
+				padding-top: 0;
+			}
+			
+			.title {
+				padding: 0.75rem 0;
+				margin: 0;
+				font-size: 1rem;
+				color: rgb(100, 100, 100);
+				border-bottom: 1px solid lightgrey;
+			}
+			
+			.list {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				
+				.item {
+					padding: 0.75rem 0;
+					cursor: pointer;
+					border-bottom: 1px solid lightgrey;
+				}
+			}
+			
+			&.blog-categories {
+				.item {
+					.name {
+						&::before {
+							content: '+';
+							display: inline-block;
+							margin: 0 0.75rem 0 0;
+							line-height: 1rem;
+							font-weight: 900;
+							color: rgb(102, 102, 102);
+							transform: scale(1.25);
+						}
+					}
+					
+					.count {
+						float: right;
+						margin: 0 0 0 0.75rem;
+						padding: 0 0.5rem;
+						color: rgb(90, 90, 90);
+						background-color: rgb(230, 230, 230);
+						border-radius: 0.125rem;
+					}
+					
+					&:hover {
+						color: @themeColor;
+						
+						.name {
+							&::before {
+								color: @themeColor;
+							}
+						}
+						.count {
+							color: white;
+							background: @themeColor;
+						}
+					}
+				}
+			}
+
+			&.popular-postes {
+				.item {
+					.pic {
+						display: block;
+						margin: 0 1rem 0 0;
+						float: left;
+						width: 3.5rem;
+						height: 3.5rem;
+						box-sizing: border-box;
+					}
+
+					.info {
+						color: rgb(90, 90, 90);
+
+						.desc {
+							display: block;
+							margin: 0;
+							font-weight: 700;
+							text-decoration: none;
+							color: inherit;
+						}
+
+						.time {
+							font-style: italic;
+						}
+					}
+					
+					&:hover {
+						.pic {
+							border: 2px solid @themeColor;
+						}
+
+						.info {
+							.desc {
+								color: @themeColor;
+							}
+						}
+					}
+				}
+			}
+
+			&.tags-cloud {
+
+				.list {
+					margin: 0.5rem 0;
+
+					.item {
+						display: inline-block;
+						border: none;
+						padding: 0.25rem;
+						
+						.tag {
+							height: 2rem;
+							line-height: 2rem;
+							display: inline-block;
+							text-decoration: none;
+							color: grey;
+							padding: 0 0.5rem;
+							background-color: rgb(241, 241, 241);
+							border-radius: .125rem;
+							
+							&:hover {
+								color: white;
+								background-color: @themeColor;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

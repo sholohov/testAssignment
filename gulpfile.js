@@ -28,25 +28,25 @@ gulp.task('clean', function() {
 gulp.task('res', function() {
 	return gulp
 		.src(path.res)
-		.pipe(gulp.dest('build/res'))
+		.pipe(gulp.dest('build'))
 		.pipe(browserSync.stream());
 });
 
 gulp.task('scripts', function() {
 	return browserify({
-		paths: [path.libs, path.scripts],
-		entries: entryFile,
-		debug: true,
-		transform: [
-			[
-				babelify,
-				{
-					presets: ['es2015'],
-					plugins: ['transform-class-properties']
-				}
+			paths: [path.libs, path.scripts],
+			entries: entryFile,
+			debug: true,
+			transform: [
+				[
+					babelify,
+					{
+						presets: ['es2015'],
+						plugins: ['transform-class-properties']
+					}
+				]
 			]
-		]
-	})
+		})
 		.transform(babelify)
 		.bundle()
 		.on('error', function(error) {
@@ -81,12 +81,17 @@ gulp.task('handlebars', function() {
 		options = {
 			ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
 			partials: {
-				footer: '<footer>the end</footer>'
+				// footer: '<footer>the end</footer>'
 			},
 			batch: ['./src/partials'],
 			helpers: {
-				capitals(str) {
-					return str.toUpperCase();
+				for (n, block) {
+					var accum = '',
+						i = -1;
+					while (++i < n) {
+						accum += block.fn(i);
+					}
+					return accum;
 				}
 			}
 		};
