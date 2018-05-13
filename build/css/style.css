@@ -392,6 +392,9 @@ html body .content-wrapper .content-block {
 #footer .content .company .social .link.beahance {
   background-image: url(../img/icon/beahance_ic.png);
 }
+#footer .content .company .social .link:hover {
+  background-color: grey;
+}
 #footer .content .blog-postes .text {
   color: grey;
 }
@@ -641,12 +644,25 @@ html body .content-wrapper .content-block {
 }
 #content #card-list .load-line .wrapper .btn {
   height: 2rem;
-  padding: 0 0.75rem;
+  padding: 0 0.75rem 0 0.75rem;
   color: white;
   font-weight: 700;
-  background-color: #e36328;
   -webkit-border-radius: .125rem;
           border-radius: .125rem;
+  background-color: #e36328;
+  -webkit-background-size: 1.5rem 1.5rem;
+          background-size: 1.5rem;
+  background-image: url(../img/icon/load_ic.png);
+  background-repeat: no-repeat;
+  background-position: 0.5rem 50%;
+}
+#content #card-list .load-line .wrapper .btn:before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 0.5rem 0 0;
+  vertical-align: middle;
 }
 #content #card-list .load-line .wrapper .btn:active {
   opacity: 0.8;
@@ -663,6 +679,15 @@ html body .content-wrapper .content-block {
   width: 33.33333333%;
 }
 #portfolio-list .item .card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   margin: 1rem;
   height: 15.5rem;
@@ -686,9 +711,23 @@ html body .content-wrapper .content-block {
   transition: opacity 0.2s;
 }
 #portfolio-list .item .card .buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  padding: 2rem;
-  text-align: center;
+  height: 100%;
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 #portfolio-list .item .card .buttons button {
   padding: 0;
@@ -730,10 +769,7 @@ html body .content-wrapper .content-block {
           transform: translateX(10rem);
 }
 #portfolio-list .item .card .description {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: block;
   padding: 0.5rem;
   text-align: center;
   color: white;
@@ -762,9 +798,9 @@ html body .content-wrapper .content-block {
   width: 0;
   height: 0;
   border: 0.75rem solid #e36328;
-  -webkit-transform: rotateZ(-45deg) translateX(-25%) translateY(-25%);
-      -ms-transform: rotate(-45deg) translateX(-25%) translateY(-25%);
-          transform: rotateZ(-45deg) translateX(-25%) translateY(-25%);
+  -webkit-transform: rotateZ(-45deg) translateX(-33%) translateY(-33%);
+      -ms-transform: rotate(-45deg) translateX(-33%) translateY(-33%);
+          transform: rotateZ(-45deg) translateX(-33%) translateY(-33%);
 }
 #portfolio-list .item .card:hover::before {
   opacity: 1;
@@ -780,5 +816,10 @@ html body .content-wrapper .content-block {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
+}
+@media screen and (max-width: 64rem) {
+  #portfolio-list .item {
+    width: 50%;
+  }
 }
 

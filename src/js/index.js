@@ -33,27 +33,11 @@ function contentMarginTop() {
 	const headElem = document.querySelector('#header');
 	const mainElem = document.querySelector('#main');
 
-	function resize() {
-		mainElem.style.paddingTop = headElem.clientHeight + 'px';
-	}
-
-	Tools.onWindowResize(resize);
-	resize();
+	mainElem.style.paddingTop = headElem.clientHeight + 'px';
+	Tools.onWindowResize(contentMarginTop);
 }
 
 function scrollBtnInit() {
 	let btn = document.querySelector('#move-to-top');
-	
-	btn.addEventListener('click', () => {
-		function getScroll() {
-			return document.documentElement.scrollTop;
-		}
-		function run() {
-			if (getScroll() > 0) {
-				requestAnimationFrame(run);
-				window.scrollBy(0, -Math.max((getScroll() / 6), 1));
-			}
-		}
-		run();
-	});
+	btn.addEventListener('click', Tools.scrollPageToTop);
 }

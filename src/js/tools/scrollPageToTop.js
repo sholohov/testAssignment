@@ -1,13 +1,14 @@
-export function scrollPageToTop() {
+function scrollPageToTop() {
+	console.warn("WWWW");
 	function getScroll() {
 		return document.documentElement.scrollTop;
 	}
 	function run() {
 		if (getScroll() > 0) {
-			requestAnimationFrame(run);
 			window.scrollBy(0, -Math.max((getScroll() / 6), 1));
+			requestAnimationFrame(run);
 		}
 	}
-	run();
-	console.warn("warn");
+	run();;
 }
+export default scrollPageToTop;
