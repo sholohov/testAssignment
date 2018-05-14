@@ -3,17 +3,20 @@
 @import 'prop';
 
 #portfolio-list {
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0.75rem 0;
 	padding: 0;
 	list-style-type: none;
-
+	
 	.item {
-		display: block;
-		float: left;
+		display: inline-flex;
 		width: 100% / 3;
+		margin: 0;
 		
 		.card {
 			display: flex;
+			flex-grow: 1;
 			flex-direction: column;
 			position: relative;
 			margin: 1rem;
@@ -34,10 +37,10 @@
 
 			.buttons {
 				display: flex;
+				flex-grow: 1;
 				align-items: center;
 				justify-content: center;
 				position: relative;
-				height: 100%;
 				padding: 1rem;
 				box-sizing: border-box;
 
@@ -59,19 +62,32 @@
 					font-weight: 900;
 					border-radius: .125rem;
 					opacity: .5;
-					transition: opacity 0.2s, transform 0.2s;
+					transition: opacity 0.2s, transform 0.2s;background-color: white;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 1.5rem;
+					transition: 0.2s;
 					
 					&.full-size {
-						color: @themeColor;
-						background: url(../img/icon/full_screen_ic.png) center/1.5rem no-repeat white;
+						background-image: url(../img/icon/full_screen_ic.png);
 						transform: translateX(-10rem);
+						
+						&:hover {
+							background-image: url(../img/icon/full_screen_white_ic.png);
+						}
 					}
 					
 					&.link {
-						color: white;
-						background-color:@themeColor;
-						background: url(../img/icon/link_ic.png) center/1.5rem no-repeat @themeColor;
+						background-image: url(../img/icon/link_ic.png);
 						transform: translateX(10rem);
+						
+						&:hover {
+							background-image: url(../img/icon/link_white_ic.png);
+						}
+					}
+
+					&:hover {
+						background-color: @themeColor;
 					}
 				}
 			}
