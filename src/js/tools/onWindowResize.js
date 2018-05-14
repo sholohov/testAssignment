@@ -5,32 +5,9 @@
  */
 function onWindowResize(cb, duration = 300) {
 	let timeout;
-	let fuList = onWindowResize.fu;
-
-	function warnText(fu) {
-		console.warn(
-			`Ошибка: \n\tвторым аргументом должна быть каллбэк-функция, у вас это -`,
-			typeof fu
-		);
-	}
-
-	if (!fuList) {
-		onWindowResize.fu = fuList = [];
-	}
-
-	if (typeof cb == 'function') {
-		fuList.push(cb);
-	} else {
-		warnText(cb);
-	}
-
 	window.addEventListener('resize', function() {
 		clearTimeout(timeout);
-		timeout = setTimeout(() => {
-			fuList.forEach(item => {
-				item();
-			});
-		}, duration);
+		timeout = setTimeout(cb, duration);
 	});
 }
 

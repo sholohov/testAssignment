@@ -292,7 +292,7 @@ html body .content-wrapper .content-block {
 #footer #nav-bottom #move-to-top {
   display: inline-block;
   margin: 1rem;
-  width: 3rem;
+  width: 2.25rem;
   height: 2.25rem;
   background: #e36328;
   -webkit-border-radius: .125rem;
@@ -453,7 +453,7 @@ html body .content-wrapper .content-block {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 25%;
-  height: 4.5rem;
+  padding: 25% 0 0;
 }
 #footer .content .photo-stream .list .photo a {
   position: absolute;

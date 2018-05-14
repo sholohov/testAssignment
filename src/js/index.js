@@ -33,8 +33,10 @@ function contentMarginTop() {
 	const headElem = document.querySelector('#header');
 	const mainElem = document.querySelector('#main');
 
-	mainElem.style.paddingTop = headElem.clientHeight + 'px';
-	Tools.onWindowResize(contentMarginTop);
+	(function run() {
+		mainElem.style.paddingTop = headElem.clientHeight + 'px';
+		Tools.onWindowResize(run);
+	})();
 }
 
 function scrollBtnInit() {
