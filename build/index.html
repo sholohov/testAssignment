@@ -7,7 +7,24 @@
 	<meta name="description" content="Тестовое задание для трудоустройства">
 	<meta name="keywords" content="ТЗ, тестовое, задание">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<title>Тестовое задание</title>
+	<title>FREXY (Test Assignment)</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/script.js"></script>
 </head>
@@ -15,199 +32,200 @@
 <body>
 	<div class="content-wrapper">
 		<header id="header" class="content-block">
-			<a class="logo" href="/" title="Go to home page">
-				<img class="pic" src="img/logo.png" alt="logotype"><span class="name">FREXY</span>
-			</a>
+	<a class="logo" href="/" title="Go to home page">
+		<img class="pic" src="img/logo.png" alt="logotype"><span class="name">FREXY</span>
+	</a>
+
+	<nav id="nav_top">
+		<ul class="page-list">
+			<li class="page active"><a href="#home">Home</a></li>
+			<li class="page"><a href="#about_us">About us</a></li>
+			<li class="page"><a href="#pages">Pages!</a></li>
+			<li class="page"><a href="#shortcode">Shortcode</a></li>
+			<li class="page"><a href="#shop">Shop</a></li>
+			<li class="page"><a href="#contact_us">Contact us</a></li>
+		</ul>
+	</nav>
+
+	<div class="header__menu">
+		<button class="btn search"></button><button class="btn basket"></button>
+	</div>
+</header> <div id="main">
+	<div id="page_description" class="content-block">
+		<h1 class="title">Our portfolio</h1>
+		<p class="desc">Check our portfolio 3 columns sample</p>
+	</div>
+
+	<nav id="pages_path" class="content-block">
+		<ul class="list">
+			<li class="page"><a href="#" title="Back to home page">Home</a></li>
+			<li class="page"><a href="#portfolio" title="Current page">Portfolio</a></li>
+			<li class="page"><span>3 columns</span></li>
+		</ul>
+	</nav>
+
+	<div id="content" class="content-block">
+		<aside id="aside_left" class="column">
+			<section class="block blog-categories">
+				<h3 class="title">BLOG CATIGORIES</h3>
+				<ul id="blog-category" class="list"></ul>
+			</section>
 		
-			<nav id="nav_top">
-				<ul class="page-list">
-					<li class="page active"><a href="#home">Home</a></li>
-					<li class="page"><a href="#about_us">About us</a></li>
-					<li class="page"><a href="#pages">Pages!</a></li>
-					<li class="page"><a href="#shortcode">Shortcode</a></li>
-					<li class="page"><a href="#shop">Shop</a></li>
-					<li class="page"><a href="#contact_us">Contact us</a></li>
-				</ul>
-			</nav>
+			<section class="block popular-postes">
+				<h3 class="title">POULAR POSTES</h3>
+				<ul id="popular-postes" class="list"></ul>
+			</section>
 		
-			<div class="header__menu">
-				<button class="btn search"></button><button class="btn basket"></button>
+			<section class="block tags-cloud">
+				<h3 class="title">TAGS CLOUD</h3>
+				<ul id="tags-cloud" class="list"></ul>
+			</section>
+		</aside>		<div id="card-list" class="column">
+			<ul class="search">
+				<li class="item active"><a href="#home">All</a></li>
+				<li class="item"><a href="#about_us">3D Graphic</a></li>
+				<li class="item"><a href="#pages_path">Illustrations</a></li>
+				<li class="item"><a href="#shortcode">Web Design</a></li>
+				<li class="item"><a href="#shop">Mobile Design</a></li>
+				<li class="item"><a href="#contact_us">Branding Design</a></li>
+			</ul>
+		
+			<ul id="portfolio-list"></ul>
+		
+			<div class="load-line">
+				<span class="wrapper">
+					<button id="portfolio-load-more" class="btn">Load more</button>
+				</span>
 			</div>
-		</header>		<div id="main">
-			<div id="page_description" class="content-block">
-				<h1 class="title">Our portfolio</h1>
-				<p class="desc">Check our portfolio 3 columns sample</p>
-			</div>
-		
-			<nav id="pages_path" class="content-block">
-				<ul class="list">
-					<li class="page"><a href="#" title="Back to home page">Home</a></li>
-					<li class="page"><a href="#portfolio" title="Current page">Portfolio</a></li>
-					<li class="page"><span>3 columns</span></li>
-				</ul>
-			</nav>
-		
-			<div id="content" class="content-block">
-				<aside id="aside_left" class="column">
-					<section class="block blog-categories">
-						<h3 class="title">BLOG CATIGORIES</h3>
-						<ul id="blog-category" class="list"></ul>
-					</section>
-				
-					<section class="block popular-postes">
-						<h3 class="title">POULAR POSTES</h3>
-						<ul id="popular-postes" class="list"></ul>
-					</section>
-				
-					<section class="block tags-cloud">
-						<h3 class="title">TAGS CLOUD</h3>
-						<ul id="tags-cloud" class="list"></ul>
-					</section>
-				</aside>		<div id="card-list" class="column">
-					<ul class="search">
-						<li class="item active"><a href="#home">All</a></li>
-						<li class="item"><a href="#about_us">3D Graphic</a></li>
-						<li class="item"><a href="#pages_path">Illustrations</a></li>
-						<li class="item"><a href="#shortcode">Web Design</a></li>
-						<li class="item"><a href="#shop">Mobile Design</a></li>
-						<li class="item"><a href="#contact_us">Branding Design</a></li>
-					</ul>
-				
-					<ul id="portfolio-list"></ul>
-				
-					<div class="load-line">
-						<span class="wrapper">
-							<button id="portfolio-load-more" class="btn">Load more</button>
-						</span>
-					</div>
-				</div>	</div>
-		</div>		<footer id="footer">
-			<nav id="nav-bottom" class="content-block">
-				<p class="copyright">Copyright © 2014 - All Rights Reserved</p>
-		
-				<ul class="page-list">
-					<li class="page"><a href="#home">Home</a></li>
-					<li class="page active"><a href="#about_us">About us</a></li>
-					<li class="page"><a href="#news">News</a></li>
-					<li class="page"><a href="#careers">Careers</a></li>
-					<li class="page"><a href="#faq">FAQ</a></li>
-					<li class="page"><a href="#contact_us">Contact us</a></li>
-				</ul>
-		
-				<button id="move-to-top" class="btn"></button>
-			</nav>
-		
-			<div id="informaton-block" class="content-block">
-				<div class="content">
-					<div class="company col-4">
-						<a class="logo" href="/" title="Go to home page">
-							<img class="pic" src="img/logo.png" alt="logotype"><span class="name">FREXY</span>
-						</a>
-		
-						<p class="text">Mauris rhoncus pretium porttitor. Cras scelerisque commodo odio.</p>
-		
-						<div class="social">
-							<a href="#" class="link twiter"></a>
-							<a href="#" class="link facebook"></a>
-							<a href="#" class="link dribbble"></a>
-							<a href="#" class="link beahance"></a>
-						</div>
-					</div>
-		
-					<div class="blog-postes col-4">
-						<h3 class="title">Latest blog postes</h3>
-						<ul class="list">
-							<li class="item">
-								<a href="#" title="Amazing post with all the goodies">
-									<p class="text">Amazing post with all the goodies</p>
-									<p class="time">March 23, 2013</p>
-								</a>
-							</li>
-							<li class="item">
-								<a href="#" title="Amazing post with all the goodies">
-									<p class="text">Amazing post with all the goodies</p>
-									<p class="time">March 23, 2013</p>
-								</a>
-							</li>
-							<li class="item">
-								<a href="#" title="Amazing post with all the goodies">
-									<p class="text">Amazing post with all the goodies</p>
-									<p class="time">March 23, 2013</p>
-								</a>
-							</li>
-						</ul>
-					</div>
-		
-					<div class="contact-info col-4">
-						<h3 class="title">Contact info</h3>
-						<ul class="list">
-							<li class="location item">
-								<a href="//www.google.com/maps" title="Go to our location">
-									<p class="text">FrexyStudio</p>
-									<p class="text">2046 Blue Spruce Lane Laurel 20707</p>
-									<p class="text">Canada.</p>
-								</a>
-							</li>
-		
-							<li class="phone item">
-								<a href="tel:123-456-7890" title="Click to call as">
-									<p class="text">Phone : (123) 456 7890</p>
-									<p class="text">Fax : (123) 456 7890</p>
-								</a>
-							</li>
-		
-							<li class="mail item">
-								<a href="mailto:frexyStudio@gmail.com" title="Write to us">
-									<p class="text">FrexyStudio@gmail.com</p>
-								</a>
-							</li>
-						</ul>
-					</div>
-		
-					<div class="photo-stream col-4">
-						<h3 class="title">Photo stream</h3>
-						<ul class="list">
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-							<li class="photo">
-								<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
-							</li>
-						</ul>
-					</div>
+		</div>	</div>
+</div> <footer id="footer">
+	<nav id="nav-bottom" class="content-block">
+		<p class="copyright">Copyright © 2014 - All Rights Reserved</p>
+
+		<ul class="page-list">
+			<li class="page"><a href="#home">Home</a></li>
+			<li class="page active"><a href="#about_us">About us</a></li>
+			<li class="page"><a href="#news">News</a></li>
+			<li class="page"><a href="#careers">Careers</a></li>
+			<li class="page"><a href="#faq">FAQ</a></li>
+			<li class="page"><a href="#contact_us">Contact us</a></li>
+		</ul>
+
+		<button id="move-to-top" class="btn"></button>
+	</nav>
+
+	<div id="informaton-block" class="content-block">
+		<div class="content">
+			<div class="company col-4">
+				<a class="logo" href="/" title="Go to home page">
+					<img class="pic" src="img/logo.png" alt="logotype"><span class="name">FREXY</span>
+				</a>
+
+				<p class="text">Mauris rhoncus pretium porttitor. Cras scelerisque commodo odio.</p>
+
+				<div class="social">
+					<a href="#" class="link twiter"></a>
+					<a href="#" class="link facebook"></a>
+					<a href="#" class="link dribbble"></a>
+					<a href="#" class="link beahance"></a>
 				</div>
 			</div>
-		</footer>	</div>
+
+			<div class="blog-postes col-4">
+				<h3 class="title">Latest blog postes</h3>
+				<ul class="list">
+					<li class="item">
+						<a href="#" title="Amazing post with all the goodies">
+							<p class="text">Amazing post with all the goodies</p>
+							<p class="time">March 23, 2013</p>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#" title="Amazing post with all the goodies">
+							<p class="text">Amazing post with all the goodies</p>
+							<p class="time">March 23, 2013</p>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#" title="Amazing post with all the goodies">
+							<p class="text">Amazing post with all the goodies</p>
+							<p class="time">March 23, 2013</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="contact-info col-4">
+				<h3 class="title">Contact info</h3>
+				<ul class="list">
+					<li class="location item">
+						<a href="//www.google.com/maps" title="Go to our location">
+							<p class="text">FrexyStudio</p>
+							<p class="text">2046 Blue Spruce Lane Laurel 20707</p>
+							<p class="text">Canada.</p>
+						</a>
+					</li>
+
+					<li class="phone item">
+						<a href="tel:123-456-7890" title="Click to call as">
+							<p class="text">Phone : (123) 456 7890</p>
+							<p class="text">Fax : (123) 456 7890</p>
+						</a>
+					</li>
+
+					<li class="mail item">
+						<a href="mailto:frexyStudio@gmail.com" title="Write to us">
+							<p class="text">FrexyStudio@gmail.com</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="photo-stream col-4">
+				<h3 class="title">Photo stream</h3>
+				<ul class="list">
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+					<li class="photo">
+						<a href="#" title="Go view photo" style="background:url(img/photo_stream.jpg)"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+	</div>
 </body>
 
 </html>
