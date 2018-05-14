@@ -453,7 +453,7 @@ html body .content-wrapper .content-block {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 25%;
-  padding: 12.5% 0;
+  height: 4.5rem;
 }
 #footer .content .photo-stream .list .photo a {
   position: absolute;
@@ -463,8 +463,8 @@ html body .content-wrapper .content-block {
   right: 0;
   bottom: 0;
   margin: 0.25rem;
-  -webkit-background-size: contain;
-          background-size: contain;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
