@@ -870,7 +870,7 @@ html body .content-wrapper .content-block {
       -ms-transform: translateY(0);
           transform: translateY(0);
 }
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 80rem) {
   #portfolio-list .item {
     width: 50%;
   }
