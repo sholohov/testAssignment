@@ -1,5 +1,4 @@
 function scrollPageToTop() {
-	console.warn("WWWW");
 	function getScroll() {
 		return document.documentElement.scrollTop;
 	}
@@ -9,6 +8,6 @@ function scrollPageToTop() {
 			requestAnimationFrame(run);
 		}
 	}
-	run();;
+	run();
 }
 export default scrollPageToTop;
