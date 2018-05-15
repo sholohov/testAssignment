@@ -5,6 +5,11 @@
 #footer {
 	border-top: 0.2rem solid @themeColor;
 
+	ul {
+		padding: 0;
+		list-style: none outside;
+	}
+
 	#nav-bottom {
 		display: flex;
 		align-items: center;
@@ -19,9 +24,7 @@
 		
 		.page-list {
 			flex-grow: 1;
-			padding: 0;
 			margin: 0 1rem;
-			list-style-type: none;
 			text-align: right;
 			
 			.page {
@@ -103,9 +106,6 @@
 			}
 			
 			.list {
-				padding: 0;
-				list-style-type: none;
-
 				.item {
 					padding: 0.5rem 0;
 					border-bottom: 1px solid lightgray;
@@ -219,14 +219,11 @@
 		//column 4
 		.photo-stream {
 			.list {
-				display: flex;
-				flex-wrap: wrap;
-
 				.photo {
 					position: relative;
-					display: inline-flex;
-					width: 25%;
-					padding: 25% 0 0;
+					float: left;
+					margin: 0;
+					padding: 25% 25% 0 0;
 
 					a {
 						position: absolute;
